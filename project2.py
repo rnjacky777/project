@@ -1,5 +1,5 @@
 import random
-print('welcome to play blackjack')
+print('welcome to play blackjack\n')
 mycard = []
 compcard = []
 allcard = []
@@ -54,7 +54,9 @@ end =   False
 while True:
     if end == True:
         break
+    print('您的起手牌為')
     print(mycard)
+    print('\n')
     print('1.抽牌')
     print('2.不抽(直接比大小)')
     a = input()
