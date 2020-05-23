@@ -54,6 +54,7 @@ end =   False
 while True:
     if end == True:
         break
+    print(mycard)
     print('1.抽牌')
     print('2.不抽(直接比大小)')
     a = input()
@@ -73,6 +74,10 @@ while True:
             end = True
         elif (point < compoint and result == True) or point >= 21:
             print('你輸了')
+            print('你的點數為'+str(point)+' 電腦為'+ str(compoint))
+            end = True
+        elif point == compoint and result == True:
+            print('平手')
             print('你的點數為'+str(point)+' 電腦為'+ str(compoint))
             end = True
     else:
