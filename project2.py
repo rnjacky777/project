@@ -4,9 +4,9 @@ mycard = []
 compcard = []
 allcard = []
 
-for i in range(1,54,1):    
+for i in range(1,53,1):    
     allcard.append(i)
- 
+print(allcard) 
 def printcard(number):
     if number <= 13:
         name = 'Spade '
