@@ -6,7 +6,7 @@ allcard = []
 
 for i in range(1,53,1):    
     allcard.append(i)
-#print(allcard) 
+print(allcard) 
 def printcard(number):
     if number <= 13:
         name = 'Spade '
@@ -47,7 +47,8 @@ def getcard(playername):
     name,point = printcard(a)
     playername.append(name)
     return point
-point =  getcard(mycard)
+    
+ppoint =  getcard(mycard)
 compoint = getcard(compcard)   
 result = False
 end =   False
@@ -61,7 +62,7 @@ while True:
     print('2.不抽(直接比大小)')
     a = input()
     if a == '1':
-        point += getcard(mycard)
+        ppoint += getcard(mycard)
         compoint += getcard(compcard)
         print(mycard)
     elif a == '2':
@@ -69,18 +70,18 @@ while True:
     else:
         continue
         
-    if point >= 21 or result == True or compoint >= 21:
-        if (point > compoint and result == True) or compoint >= 21:
+    if ppoint >= 21 or result == True or compoint >= 21:
+        if (ppoint > compoint and result == True) or compoint >= 21:
             print('你贏了')
-            print('你的點數為'+str(point)+' 電腦為'+str(compoint))
+            print('你的點數為'+str(ppoint)+' 電腦為'+str(compoint))
             end = True
-        elif (point < compoint and result == True) or point >= 21:
+        elif (ppoint < compoint and result == True) or ppoint >= 21:
             print('你輸了')
-            print('你的點數為'+str(point)+' 電腦為'+ str(compoint))
+            print('你的點數為'+str(ppoint)+' 電腦為'+ str(compoint))
             end = True
-        elif point == compoint and result == True:
+        elif ppoint == compoint and result == True:
             print('平手')
-            print('你的點數為'+str(point)+' 電腦為'+ str(compoint))
+            print('你的點數為'+str(ppoint)+' 電腦為'+ str(compoint))
             end = True
     else:
         pass
@@ -89,11 +90,11 @@ while True:
         print('你要在玩一次嗎 1.Yes 2.No')
         b = input()
         if b == '1':
-            for i in range(0,54,1):    
+            for i in range(0,53,1):    
                 allcard.append(i)
             mycard = []
             compcard = []
-            point =  getcard(mycard)
+            ppoint =  getcard(mycard)
             compoint = getcard(compcard)   
             result = False
             end =   False
